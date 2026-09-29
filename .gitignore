@@ -1,0 +1,9 @@
+﻿BARS_Email/.secrets/.env
+BARS_Email/.secrets/*
+!BARS_Email/.secrets/.env.example
+**/.env
+!**/.env.example
+node_modules/
+*.log
+.DS_Store
+_send-result-*.json

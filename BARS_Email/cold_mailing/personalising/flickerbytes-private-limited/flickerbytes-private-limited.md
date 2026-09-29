@@ -1,0 +1,89 @@
+# FlickerBytes Private Limited
+
+**Cluster:** [[cold_mailing/personalising/index|personalising]] · [[cold_mailing/README|cold mailing]] · [[pilot/index|pilot]] · [[README|hub]]  
+**Rules:** [[specs/email-structure]] · [[specs/outreach-voice]] · [[specs/offer-and-cta]] · [[barsconsulting]]  
+**Playbook:** [[pilot/manual-pilot-playbook]] · **ICP:** [[decisions/01-ideal-client-profile]] · **Messaging:** [[decisions/07-messaging-personalization]]
+
+**Status:** research pending  
+**Folder:** `flickerbytes-private-limited`
+
+---
+
+## Contact
+
+| Field | Value |
+|-------|-------|
+| Company Name | FlickerBytes Private Limited |
+| Email | `sales.niyam@flickerbytes.com` |
+| Email verified | |
+| Phone | |
+
+## People
+
+| Field | Value |
+|-------|-------|
+| First Name | |
+| Last Name | |
+| Title | |
+| Person LinkedIn URL | |
+
+## Company profile
+
+| Field | Value |
+|-------|-------|
+| Website | |
+| LinkedIn company | |
+| Stage | |
+| Focus Industry | |
+| Focus Sector | |
+| City | |
+| Location | |
+| DPIIT / Startup India | |
+
+## Research notes
+
+<!-- 2–3 bullets: what they do + one specific hook for the email -->
+
+-
+
+## Research sources
+
+- [ ] Google: `"FlickerBytes Private Limited" hyderabad startup`
+- [ ] LinkedIn company page + founder/CEO
+- [ ] Website `/about`, `/contact`
+- [ ] DPIIT / Startup India profile
+- [ ] Other:
+
+`research_source`:
+
+## Personalization hook
+
+<!-- One specific thing to reference in the email -->
+
+## Email draft
+
+**Status:** draft v2 · [[cold_mailing/personalising/flickerbytes-private-limited/email-draft|email-draft]]
+
+**Subject:** Niyam sells DPDP compliance: who's on FlickerBytes' own books?
+
+**Body:**
+
+Hi,
+
+Niyam's DPDP angle is timely. The pattern we see: compliance startups still run their own GST, payroll, and burn tracking on weekends.
+
+If you want that off your plate while you sell Niyam, we're the Hyderabad team for it.
+
+https://cal.com/anirudh-reddy
+
+
+## Outreach log
+
+| Field | Value |
+|-------|-------|
+| approval_status | draft |
+| sent_date | |
+| follow_up_date | |
+| reply | |
+| zoho_id | |
+| enrichment_status | pending |
