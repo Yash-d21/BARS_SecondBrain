@@ -153,6 +153,23 @@ Track every outbound cold mail here. Update status on the company `email-draft.m
 
 ---
 
+## 2026-10-01 (Thursday) — automation draft, not sent
+
+**Batch size:** 20 companies drafted (next healthcare slice after the unsent 2026-09-30 pack)  
+**Actually sent:** 0 companies · **0 messages**  
+**Pack:** `BARS_Email/cold_mailing/personalising/2026-10-01.md`  
+**Channel:** not sent  
+
+### Notes (2026-10-01 Thursday run)
+
+- Dry-run parsed 20 companies / 41 messages.
+- `--send` did not run SMTP. `BARS_Email/.secrets/.env` is missing (`ENOENT`), and `CONNECT_APP_PASSWORD` / `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` were not in the environment.
+- `companies.csv` was not updated. These twenty are not `sent=yes`.
+- The 29 Sep draft (`2026-09-29.md`) and 30 Sep draft (`2026-09-30.md`) are still unsent for the same reason.
+- Do not treat this draft as a completed send.
+
+---
+
 ## Later send days
 
 _(append new dated sections below — log 23 Sep when operator confirms send)_
