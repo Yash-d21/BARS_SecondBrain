@@ -187,6 +187,22 @@ Track every outbound cold mail here. Update status on the company `email-draft.m
 
 ---
 
+## 2026-10-04 (Sunday) — backlog send
+
+**Batch size:** 80 companies across four drafted packs  
+**Actually sent:** 80 companies · **146 messages** · failed 0  
+**Channel:** SMTP from `connect@barsconsulting.in` · Reply-To `anirudh@barsconsulting.in` · `signature.html` appended  
+**Packs:** `2026-09-29.md` (20/29) · `2026-09-30.md` (20/29) · `2026-10-01.md` (20/41) · `2026-10-02.md` (20/47)
+
+### Notes (2026-10-04)
+
+- SMTP send completed 2026-10-04. Each pack returned `failed=0`.
+- CSV ids 243–322 marked `sent=yes` / `sent_date=2026-10-04`.
+- Earlier dated sections above still describe the original draft runs. This section is the send record.
+- Do not re-send these four packs.
+
+---
+
 ## Later send days
 
 _(append new dated sections below — log 23 Sep when operator confirms send)_
