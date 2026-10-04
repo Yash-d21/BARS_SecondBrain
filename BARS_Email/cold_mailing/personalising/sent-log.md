@@ -153,37 +153,35 @@ Track every outbound cold mail here. Update status on the company `email-draft.m
 
 ---
 
-## 2026-10-01 (Thursday) — automation draft, not sent
+## 2026-10-01 (Thursday) — drafted that day, sent 2026-10-04
 
-**Batch size:** 20 companies drafted (next healthcare slice after the unsent 2026-09-30 pack)  
-**Actually sent:** 0 companies · **0 messages**  
+**Batch size:** 20 companies (next healthcare slice after the 2026-09-30 pack)  
+**Actually sent:** 20 companies · **41 messages** · failed 0  
+**Sent date:** `2026-10-04`  
 **Pack:** `BARS_Email/cold_mailing/personalising/2026-10-01.md`  
-**Channel:** not sent  
+**Channel:** SMTP from `connect@barsconsulting.in`  
 
-### Notes (2026-10-01 Thursday run)
+### Notes
 
-- Dry-run parsed 20 companies / 41 messages.
-- `--send` did not run SMTP. `BARS_Email/.secrets/.env` is missing (`ENOENT`), and `CONNECT_APP_PASSWORD` / `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` were not in the environment.
-- `companies.csv` was not updated. These twenty are not `sent=yes`.
-- The 29 Sep draft (`2026-09-29.md`) and 30 Sep draft (`2026-09-30.md`) are still unsent for the same reason.
-- Do not treat this draft as a completed send.
+- The Thursday run only drafted this pack. SMTP secrets were missing, so nothing went out that day.
+- Sent on 2026-10-04 with the backlog. CSV rows for this pack are `sent=yes` / `sent_date=2026-10-04`.
+- Do not re-send.
 
 ---
 
-## 2026-10-02 (Friday) — automation draft, not sent
+## 2026-10-02 (Friday) — drafted that day, sent 2026-10-04
 
-**Batch size:** 20 companies drafted (next healthcare slice after the unsent 2026-10-01 pack)  
-**Actually sent:** 0 companies · **0 messages**  
+**Batch size:** 20 companies (next healthcare slice after the 2026-10-01 pack)  
+**Actually sent:** 20 companies · **47 messages** · failed 0  
+**Sent date:** `2026-10-04`  
 **Pack:** `BARS_Email/cold_mailing/personalising/2026-10-02.md`  
-**Channel:** not sent  
+**Channel:** SMTP from `connect@barsconsulting.in`  
 
-### Notes (2026-10-02 Friday run)
+### Notes
 
-- Dry-run parsed 20 companies / 47 messages.
-- `--send` did not reach SMTP. `BARS_Email/.secrets/.env` is missing (`ENOENT`), and `CONNECT_APP_PASSWORD` / `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` were not in the environment.
-- `companies.csv` was not updated. These twenty are not `sent=yes`.
-- The 29 Sep draft (`2026-09-29.md`), 30 Sep draft (`2026-09-30.md`), and 1 Oct draft (`2026-10-01.md`) are still unsent for the same reason.
-- Do not treat this draft as a completed send.
+- The Friday run only drafted this pack. SMTP secrets were missing, so nothing went out that day.
+- Sent on 2026-10-04 with the backlog. CSV rows for this pack are `sent=yes` / `sent_date=2026-10-04`.
+- Do not re-send.
 
 ---
 
