@@ -187,6 +187,23 @@ Track every outbound cold mail here. Update status on the company `email-draft.m
 
 ---
 
+## 2026-10-04 (Sunday) — held, not sent
+
+**Batch size:** 0 new companies (four unsent drafts already queued)  
+**Actually sent:** 0 companies · **0 messages**  
+**Pack:** no new pack  
+**Channel:** not sent  
+
+### Notes (2026-10-04 Sunday run)
+
+- Cron fired on Sunday 2026-10-04. Weekday volume stays 20 companies per run.
+- Dry-run of the queued drafts parsed 80 companies / 146 messages: `2026-09-29.md` (20/29), `2026-09-30.md` (20/29), `2026-10-01.md` (20/41), `2026-10-02.md` (20/47).
+- No SMTP session. `BARS_Email/.secrets/.env` is missing, and `CONNECT_APP_PASSWORD`, `TELEGRAM_BOT_TOKEN`, and `TELEGRAM_CHAT_ID` are not in the process environment.
+- Stop rule: do not fake sends. `companies.csv` was not updated. No company was marked `sent=yes`.
+- No fifth pack. These four drafts go out, oldest first, once both SMTP and Telegram secrets are on the agent. Next new slice still starts after Winmak Nutrilabs (JSON index 316).
+
+---
+
 ## Later send days
 
 _(append new dated sections below — log 23 Sep when operator confirms send)_
