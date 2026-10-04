@@ -120,36 +120,19 @@ Track every outbound cold mail here. Update status on the company `email-draft.m
 
 ---
 
-## 2026-09-29 (Tuesday) — automation draft, not sent
+## 2026-10-04 (Sunday) — batch date `2026-10-04`
 
-**Batch size:** 20 companies drafted (next healthcare slice after the 29 Sep pack)  
-**Actually sent:** 0 companies · **0 messages**  
-**Pack:** `BARS_Email/cold_mailing/personalising/2026-09-29.md`  
-**Channel:** not sent  
+**Batch size:** 40 companies (the drafted `2026-09-29.md` and `2026-09-30.md` packs)  
+**Actually sent:** 40 companies · **58 messages** · failed 0  
+**Packs:** `BARS_Email/cold_mailing/personalising/2026-09-29.md` · `BARS_Email/cold_mailing/personalising/2026-09-30.md`  
+**Channel:** SMTP from `connect@barsconsulting.in` · Reply-To `anirudh@barsconsulting.in` · `signature.html` appended  
 
-### Notes (2026-09-29 Tuesday run)
+### Notes (2026-10-04)
 
-- Dry-run parsed 20 companies / 29 messages.
-- `--send` did not run SMTP. `BARS_Email/.secrets/.env` is missing, and `CONNECT_APP_PASSWORD` / `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` were not in the environment.
-- `companies.csv` was not updated. These twenty are not `sent=yes`.
-- Do not treat this draft as a completed send.
-
----
-
-## 2026-09-30 (Wednesday) — automation draft, not sent
-
-**Batch size:** 20 companies drafted (next healthcare slice after the unsent 2026-09-29 pack)  
-**Actually sent:** 0 companies · **0 messages**  
-**Pack:** `BARS_Email/cold_mailing/personalising/2026-09-30.md`  
-**Channel:** not sent  
-
-### Notes (2026-09-30 Wednesday run)
-
-- Dry-run parsed 20 companies / 29 messages.
-- `--send` did not run SMTP. `BARS_Email/.secrets/.env` is missing (`ENOENT`), and `CONNECT_APP_PASSWORD` / `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` were not in the environment.
-- `companies.csv` was not updated. These twenty are not `sent=yes`.
-- The 29 Sep draft (`2026-09-29.md`, 20 companies / 29 messages) is still unsent for the same reason.
-- Do not treat this draft as a completed send.
+- SMTP send completed 2026-10-04 · `sent=58 failed=0`
+- CSV ids 243–262 (`2026-09-29` pack) and 263–282 (`2026-09-30` pack) marked `sent=yes` / `sent_date=2026-10-04`
+- These packs were drafted earlier and held because SMTP secrets were missing. They were sent on this date after credentials were added locally.
+- Telegram was not notified. `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` are still empty.
 
 ---
 
