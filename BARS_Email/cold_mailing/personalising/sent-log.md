@@ -201,6 +201,10 @@ Track every outbound cold mail here. Update status on the company `email-draft.m
 - Earlier dated sections above still describe the original draft runs. This section is the send record.
 - Do not re-send these four packs.
 
+### Duplicate session (same day)
+
+A second SMTP session, started before this record was on the working branch, sent `2026-09-29.md` and `2026-09-30.md` again: **40 companies · 58 messages · failed 0**. The 1 Oct and 2 Oct packs were not in that second session. Do not send any of the four packs again.
+
 ---
 
 ## Later send days
