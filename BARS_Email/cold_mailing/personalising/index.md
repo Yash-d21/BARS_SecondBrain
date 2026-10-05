@@ -12,6 +12,7 @@ Per-company research notes and email drafts for the Phase 0 cold batch.
 **23 Sep send pack (20):** [[cold_mailing/personalising/23rd-sep|23rd-sep]] · Healthcare researched slice · draft (unsent)  
 **26 Sep send pack (50):** [[cold_mailing/personalising/26th-sep|26th-sep]] · **sent 2026-09-26** · Healthcare researched slice  
 **29 Sep send pack (20):** [[cold_mailing/personalising/29th-sep|29th-sep]] · **sent 2026-09-29** · new outreach-templates plates  
+**5 Oct send pack (20):** [[cold_mailing/personalising/2026-10-05|2026-10-05]] · **sent 2026-10-05** · 36 messages · failed 0  
 
 **16 Sep research pack:** [[cold_mailing/personalising/index#Telangana DPIIT batch — `2026-09-16` (50)|below]]  
 **Sender:** `connect@barsconsulting.in`  
