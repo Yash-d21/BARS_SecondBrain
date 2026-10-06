@@ -222,6 +222,24 @@ A second SMTP session, started before this record was on the working branch, sen
 
 ---
 
+## 2026-10-06 (Tuesday) — sent same day
+
+**Batch size:** 20 companies (next healthcare slice after the 2026-10-05 pack)  
+**Actually sent:** 20 companies · **24 messages** · failed 0  
+**Sent date:** `2026-10-06`  
+**Pack:** `BARS_Email/cold_mailing/personalising/2026-10-06.md`  
+**Channel:** SMTP from `connect@barsconsulting.in` · Reply-To `anirudh@barsconsulting.in` · `signature.html` appended  
+
+### Notes
+
+- SMTP accepted every recipient (`sent=24`, `failed=0`). No mailbox was rejected at send time.
+- CSV ids 343–362 marked `sent=yes` / `sent_date=2026-10-06`.
+- Dead domains, null MX, filing-agent inboxes, wrong-entity inboxes, and already packed names were left out of this batch.
+- Last company in file order among this pack: Hyd Hemp (`hyd-hemp-india-private-limited`). Next run continues after that row in `leads/researched-leads.json`.
+- Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset, and `getUpdates` returned no chats. Do not treat a Telegram summary as sent.
+
+---
+
 ## Later send days
 
 _(append new dated sections below — log 23 Sep when operator confirms send)_
