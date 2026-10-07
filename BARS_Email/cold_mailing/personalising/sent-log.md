@@ -240,6 +240,25 @@ A second SMTP session, started before this record was on the working branch, sen
 
 ---
 
+## 2026-10-07 (Wednesday) — sent same day
+
+**Batch size:** 20 companies  
+**Actually sent:** 20 companies · **25 messages** · failed 0  
+**Sent date:** `2026-10-07`  
+**Pack:** `BARS_Email/cold_mailing/personalising/2026-10-07.md`  
+**Channel:** SMTP from `connect@barsconsulting.in` · Reply-To `anirudh@barsconsulting.in` · `signature.html` appended  
+
+### Notes
+
+- SMTP accepted every recipient (`sent=25`, `failed=0`). No mailbox was rejected at send time.
+- CSV ids 363–382 marked `sent=yes` / `sent_date=2026-10-07`.
+- The rows after Hyd Hemp in `leads/researched-leads.json` were already sent or skipped on 5–6 Oct (no inbox, no CIN, strike-off, scaled operator, IT, publishing, null MX, or MX equal to the website host). This pack used earlier unsent healthcare/wellness rows with a High inbox and a domain that accepts mail.
+- Left off on purpose: CallHealth, ekincare, Metromedi, Healtheeliving, Vitruvian, Osmosys, Preventa, Finn, Tridha, Apna Green, Chitraksh, HILS, Ninnti (current brand is e-com AI), Dr Patro `info@drpatros.com` (no MX), Aether Rain (no MX), Unsweetened `ask@` (no MX; MCA Gmail was used), Sattva Living domain (missing), UrbanHelps (no MX), BioChiol (MX is the website host), the Ireland HealthBeacon domain, the `gamil.com` typo, and CA / company-secretary inboxes.
+- Next run: keep deduping against `companies.csv` sent=yes and every dated pack. Do not restart from Hyd Hemp only.
+- Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset. The bot username is not a chat id, and this run did not poll `getUpdates`. Do not treat a Telegram summary as sent.
+
+---
+
 ## Later send days
 
 _(append new dated sections below — log 23 Sep when operator confirms send)_
