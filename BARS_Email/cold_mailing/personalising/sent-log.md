@@ -259,6 +259,26 @@ A second SMTP session, started before this record was on the working branch, sen
 
 ---
 
+## 2026-10-08 (Thursday) — sent same day
+
+**Batch size:** 20 companies  
+**Actually sent:** 20 companies · **20 messages** · failed 0  
+**Sent date:** `2026-10-08`  
+**Pack:** `BARS_Email/cold_mailing/personalising/2026-10-08.md`  
+**Channel:** SMTP from `connect@barsconsulting.in` · Reply-To `anirudh@barsconsulting.in` · `signature.html` appended  
+
+### Notes
+
+- SMTP accepted every recipient (`sent=20`, `failed=0`). No mailbox was rejected at send time.
+- CSV ids 383–402 marked `sent=yes` / `sent_date=2026-10-08`.
+- Each company got one inbox: the High MCA or brand address whose domain has MX. Left off second addresses that belong to another entity, a masked local-part, or a domain with no MX / MX equal to the website host.
+- Origin Fertility, Docella, and Mindvera went to the MCA Gmail only. `originfertilitycenter.com`, `uwe.care`, and `mindvera.com` have no MX.
+- Divergent Nutrition `support@thedivergent.in` has Google MX (site itself is the storefront).
+- Do not re-send this pack.
+- Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset. The bot username is not a chat id, and this run did not poll `getUpdates`. Do not treat a Telegram summary as sent.
+
+---
+
 ## Later send days
 
 _(append new dated sections below — log 23 Sep when operator confirms send)_
