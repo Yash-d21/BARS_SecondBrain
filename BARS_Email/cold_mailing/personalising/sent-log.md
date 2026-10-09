@@ -279,6 +279,24 @@ A second SMTP session, started before this record was on the working branch, sen
 
 ---
 
+## 2026-10-09 (Friday) — sent same day
+
+**Batch size:** 14 companies (fewer than 20 sendable rows remain)  
+**Actually sent:** 14 companies · **14 messages** · failed 0  
+**Sent date:** `2026-10-09`  
+**Pack:** `BARS_Email/cold_mailing/personalising/2026-10-09.md`  
+**Channel:** SMTP from `connect@barsconsulting.in` · Reply-To `anirudh@barsconsulting.in` · `signature.html` appended  
+
+### Notes
+
+- SMTP accepted every recipient (`sent=14`, `failed=0`). No mailbox was rejected at send time.
+- CSV ids 403–416 marked `sent=yes` / `sent_date=2026-10-09`.
+- Only 14 unsent healthcare/wellness rows still had an Active CIN, a High inbox, and a domain that accepts mail. The rest of `leads/researched-leads.json` is already sent, blocked, brand-only, masked, strike-off, a filing-agent inbox, or a domain with no MX / a null MX / an MX that is the website host.
+- One address per company. Viyona and 1Script used the MCA Gmail only (`viyonapharmaceuticals.com` and `healthup.care` do not accept mail).
+- Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset. The bot username is not a chat id, and this run did not poll `getUpdates`. Do not treat a Telegram summary as sent.
+
+---
+
 ## Later send days
 
 _(append new dated sections below — log 23 Sep when operator confirms send)_
