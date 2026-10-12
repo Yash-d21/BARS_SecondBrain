@@ -297,6 +297,25 @@ A second SMTP session, started before this record was on the working branch, sen
 
 ---
 
+## 2026-10-12 (Monday) — no send
+
+**Batch size:** 0 companies (no sendable remainder)  
+**Actually sent:** 0 companies · **0 messages** · failed 0  
+**Sent date:** `2026-10-12`  
+**Pack:** none  
+**Channel:** no SMTP session  
+
+### Notes
+
+- Deduped `companies.csv` `sent=yes` and packs `18th-sep.md`, `23rd-sep.md`, `26th-sep.md`, `29th-sep.md`, plus `2026-09-29.md` through `2026-10-09.md` (name + email).
+- `leads/researched-leads.json` has no further healthcare/wellness row with an Active CIN, an unlocked High company inbox, and a domain that accepts mail.
+- MX rechecked this run. Still unusable: `foynaturals.com` (null MX), `fitsocial.in`, `urbanhelps.in`, `drpatros.com`, `aetherrain.com` (no MX), `biochiol.com` and `healtheeliving.com` (MX is the website host), `healthup.care` (does not resolve).
+- Still skipped: blocked / NOT UNLOCKED / masked local-parts, brand-only or no-CIN rows, strike-off / CIRP / liquidation / dormant, CA or company-secretary or filing inboxes, and rows whose research does not support a healthcare product.
+- `companies.csv` was not changed. No new ids.
+- Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset. The bot username is not a chat id, and this run did not poll `getUpdates`. Do not treat a Telegram summary as sent.
+
+---
+
 ## Later send days
 
 _(append new dated sections below — log 23 Sep when operator confirms send)_
