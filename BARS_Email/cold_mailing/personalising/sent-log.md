@@ -300,3 +300,23 @@ A second SMTP session, started before this record was on the working branch, sen
 ## Later send days
 
 _(append new dated sections below — log 23 Sep when operator confirms send)_
+
+---
+
+## 2026-10-22 (Thursday) — sent same day
+
+**Batch size:** 1 company (fewer than 20 sendable rows remain)  
+**Actually sent:** 1 company · **1 message** · failed 0  
+**Sent date:** `2026-10-22`  
+**Pack:** `BARS_Email/cold_mailing/personalising/2026-10-22.md`  
+**Channel:** SMTP from `connect@barsconsulting.in` · Reply-To `anirudh@barsconsulting.in` · `signature.html` appended  
+
+### Notes
+
+- SMTP accepted the only recipient (`sent=1`, `failed=0`). No mailbox was rejected at send time.
+- CSV id 417 marked `sent=yes` / `sent_date=2026-10-22`.
+- One address: `support@metromedi.com` (High brand contact, Google Workspace MX). The MCA Yahoo was not added. Pharmacy retail, so the GST plate fits. No URL, city, CIN, or revenue in the body.
+- The other 415 researched rows are already sent, already listed in a pack (including the still-unsent 23 Sep draft), blocked, masked, brand-only / no CIN, strike-off / CIRP / liquidation / dormant, a CA or company-secretary or filing inbox, a sister inbox already mailed, a null MX, or an MX equal to the website host. Rows that are not a healthcare product were left off.
+- Do not re-send this pack. Do not auto-send `23rd-sep.md` until that hold is lifted. It is still `sent=no`.
+- Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset. The bot username is not a chat id, and this run did not poll `getUpdates`. Do not treat a Telegram summary as sent.
+
