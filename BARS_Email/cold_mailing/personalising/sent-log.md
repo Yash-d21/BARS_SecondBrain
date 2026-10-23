@@ -320,3 +320,23 @@ _(append new dated sections below — log 23 Sep when operator confirms send)_
 - Do not re-send this pack. Do not auto-send `23rd-sep.md` until that hold is lifted. It is still `sent=no`.
 - Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset. The bot username is not a chat id, and this run did not poll `getUpdates`. Do not treat a Telegram summary as sent.
 
+---
+
+## 2026-10-23 (Friday) — nothing sendable
+
+**Batch size:** 0 companies (fewer than 20 sendable rows remain)  
+**Actually sent:** 0 companies · **0 messages** · failed 0  
+**Sent date:** `2026-10-23`  
+**Pack:** none drafted  
+**Channel:** SMTP was not called  
+
+### Notes
+
+- Rechecked all 416 rows in `leads/researched-leads.json` against `companies.csv` where `sent=yes`, and against `18th-sep.md`, `23rd-sep.md`, `26th-sep.md`, `29th-sep.md`, every later dated pack, and `*_sentmails.md` (name, folder, and email).
+- No unsent row still has an Active CIN, a High inbox for this company, a healthcare or wellness product the research actually supports, and a domain that accepts mail.
+- MX recheck on 2026-10-23: `fitsocial.in`, `urbanhelps.in`, `healthup.care`, `drpatros.com`, `viyonapharmaceuticals.com`, `originfertilitycenter.com`, `mindvera.com`, and `aetherrain.com` still have no MX. `foynaturals.com` publishes a null MX. `biochiol.com` and `healtheeliving.com` still point MX at the website host. `uwe.care` resolves to a parking exchanger.
+- Still excluded: blocked, masked, or NOT UNLOCKED rows; brand-only or no-CIN rows; strike-off, CIRP, liquidation, or dormant; CA, company-secretary, or filing inboxes; sister inboxes already mailed; and rows whose research is not a healthcare or wellness product.
+- `companies.csv` was not changed. Do not mark anyone `sent=yes` for this date.
+- Do not auto-send `23rd-sep.md`. It is still `sent=no`.
+- Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset. The bot username is not a chat id, and this run did not poll `getUpdates`. Do not treat a Telegram summary as sent.
+
