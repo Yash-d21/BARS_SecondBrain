@@ -340,3 +340,24 @@ _(append new dated sections below — log 23 Sep when operator confirms send)_
 - Do not auto-send `23rd-sep.md`. It is still `sent=no`.
 - Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset. The bot username is not a chat id, and this run did not poll `getUpdates`. Do not treat a Telegram summary as sent.
 
+---
+
+## 2026-10-26 (Monday) — nothing sendable
+
+**Batch size:** 0 companies (fewer than 20 sendable rows remain)  
+**Actually sent:** 0 companies · **0 messages** · failed 0  
+**Sent date:** `2026-10-26`  
+**Pack:** none drafted  
+**Channel:** SMTP was not called  
+
+### Notes
+
+- Rechecked all 416 rows in `leads/researched-leads.json` against `companies.csv` where `sent=yes`, and against `18th-sep.md`, `23rd-sep.md`, `26th-sep.md`, `29th-sep.md`, every later dated pack, and `*_sentmails.md` (name, folder, and email).
+- No unsent row still has an Active CIN, a High inbox for this company, a healthcare or wellness product the research actually supports, and a domain that accepts mail.
+- MX recheck on 2026-10-26: `fitsocial.in`, `urbanhelps.in`, `healthup.care`, `drpatros.com`, `viyonapharmaceuticals.com`, `originfertilitycenter.com`, `mindvera.com`, and `aetherrain.com` still have no MX. `digitalmeds.co`, `ethikaworklife.com`, and `tridhascholars.com` also have no MX. `foynaturals.com` publishes a null MX. `biochiol.com`, `healtheeliving.com`, and `nmantra.in` still point MX at the website host. `uwe.care` still resolves to `park-mx.above.com`.
+- Still excluded: blocked, masked, or NOT UNLOCKED rows; brand-only or no-CIN rows; strike-off, CIRP, liquidation, or dormant; CA, company-secretary, or filing inboxes; sister inboxes already mailed; and rows whose research is not a healthcare or wellness product. ekincare stayed off because the dossier is a Series B company, so a no-finance-lead plate would invent the pain.
+- `companies.csv` was not changed. Do not mark anyone `sent=yes` for this date.
+- Do not auto-send `23rd-sep.md`. It is still `sent=no`.
+- SMTP was not called. No app password was written into the repo.
+- Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset. The bot username is not a chat id, and this run did not poll `getUpdates`. Do not treat a Telegram summary as sent.
+
