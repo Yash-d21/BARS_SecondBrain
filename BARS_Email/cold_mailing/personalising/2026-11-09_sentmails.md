@@ -1,0 +1,28 @@
+# 2026-11-09 send results
+
+**Pack:** none drafted  
+**From:** `connect@barsconsulting.in` · **Reply-To:** `anirudh@barsconsulting.in`  
+**Result:** **not sent**  
+**Sent date:** 2026-11-09  
+**SMTP:** 0 companies / 0 messages · failed 0  
+**companies.csv:** unchanged
+
+Fewer than 20 sendable healthcare rows remained. After dedupe against `companies.csv` (`sent=yes`) and every dated pack, including the held `23rd-sep.md` draft, no unsent row still has an Active CIN, a High inbox for this company, a healthcare or wellness product the research supports, and a domain that accepts mail.
+
+Of 416 rows in `leads/researched-leads.json`, 312 are already covered by `sent=yes` or a pack (name, folder, or email). 26 unsent rows have no email. 78 unsent rows still have an address. None of those 78 passed the send gate.
+
+MX recheck on 2026-11-09 did not revive previously skipped domains. `fitsocial.in`, `urbanhelps.in`, `drpatros.com`, `originfertilitycenter.com`, `mindvera.com`, `aetherrain.com`, `medyblog.com`, `sathiherbals.com`, `thecura.co`, `dentyle.in`, and `dealscan.co.in` still have no MX. `healthup.care`, `viyonapharmaceuticals.com`, `digitalmeds.co`, `ethikaworklife.com`, and `tridhascholars.com` still do not resolve. `foynaturals.com` still publishes a null MX (priority 0, empty exchanger). `biochiol.com`, `healtheeliving.com`, and `nmantra.in` still point MX at the website host. `uwe.care` still resolves to the parking exchanger `park-mx.above.com`. `mymedpolicy.com` points MX at `mail.mymedpolicy.com` and the Hyderabad brand still has no matched CIN. `tecvertex.com` accepts mail at `mail.tecvertex.com`, and the dossier still says the CIN on that row is a different company. Do not use the `.com.com` typo addresses.
+
+Domains that do accept mail stayed off for a non-routing reason. `wellnessfuel.in` (`mail.wellnessfuel.in`; do not substitute `info@wellnessfuel.in`, different Delhi/Noida entity), `arivhealthcare.com` (clinic inbox is not Ariv Biosciences), `earthlies.in` (Zoho, no CIN), `occulthouse.in` (different entity), `tealwellness.com` (Outlook, no Active India entity), and `igylx.com` (Rediffmail Pro, personal inbox not unlocked). `makeyoufit.in`, `therapickmind.com`, `vedicneeds.com`, `bharatfit.in`, `nutriscan.app`, `mylktree.com`, `snugbug.co`, `nuform.in`, `neuformnutrition.com`, `venica.in`, `carin.life`, `earthful.me`, `thebeyondedge.com`, and `glspools.in` are brand-only, blocked, NOT UNLOCKED, have no CIN, or are not a healthcare product. `bharatfit.in` accepts mail, and the addresses on that row belong to a different legal entity. `chewlynutritions.com` and `ainetwork.in` accept mail but the local-part is masked (`deep@ainetwork.in` is not a disclosed inbox). `fitaf.in` accepts mail at `smtp.google.com`, and the dossier still says not to send: product ownership is not confirmed. `playcafediaries.in`, `sidventures.in`, and `ninnti.com` accept mail, and the research is a cafe, a marketing brand with a CA inbox, and e-commerce software. `amplifylife.com` accepts mail at Outlook, and that inbox is the sibling brand, not the Nxtgen company inbox. `sciencehood.info` accepts mail and the entity is a publisher. `ekincare.com` accepts mail, and the dossier is a Series B company, so a startup books plate would invent the pain.
+
+Closest Active rows that would bounce, so they stayed off: Civigo (`santoshmaturi@urbanhelps.in`, no MX), Fitsocial (`support@fitsocial.in` / `join@fitsocial.in`, no MX), Aether Rain (`info@aetherrain.com`, no MX, dossier says the domain is parked), Healtheeliving (`info@healtheeliving.com`, MX equals the website host), and GRST / Biochiol (`info@biochiol.com`, MX equals the website host).
+
+Other holds confirmed from the dossiers this pass: Zestiny Labs (DealScan gift cards, not a wellness product), Neocortex Lifesciences (CIRP / liquidation), Netri Healthcare (iLabs group inbox), Health4All (dormant under section 455), CallHealth (company-secretary inbox on a scaled operator), Blueowl (liquidation), Preventa Curo, Finn Research, Cure Mile, and Op24 (strike off), Curova (textiles), Adept Web (CA filing inbox), Vitruvian 3D and Osmosys (not healthcare), Yogasva (sibling software inbox), Sree Aspada (filing-pattern inbox), Lavleen Gupta (person-only), Hemp Tribe (shared Suraksha Pharma accounts inbox), Prayukti Innovistaa (textile NIC), Digiring HW (registry Gmail, dossier says do not send), Flyingroot Solutions (registry Gmail, product not established), Egarevel Tech (no verified health product), GB Holdings (no verified health product), Dentyle (legal entity not resolved to a Dentyle CIN), and Shree Distributors / Apna Green / AyurvedShakti / Make You Fit / Vedicneeds / TherapickMind / NutriScan / Snugglebug / DigitalMeds / My MedPolicy / Careinlife (brand-only or a different entity).
+
+Blocked, masked, NOT UNLOCKED, brand-only or no-CIN, strike-off, CIRP, liquidation, dormant, filing, CA, company-secretary, sister-entity, and non-healthcare rows stayed off. SMTP was not called. Nothing was marked sent.
+
+| # | Company | Emails | Subject | Send result |
+|---|---------|--------|---------|-------------|
+| - | - | - | - | no sendable company |
+
+Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset. The bot username is not a chat id, and this run did not poll `getUpdates`. Do not treat a Telegram summary as sent.
