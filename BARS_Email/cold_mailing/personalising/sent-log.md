@@ -579,4 +579,30 @@ _(append new dated sections below — log 23 Sep when operator confirms send)_
 - SMTP was not called. No app password was written into the repo.
 - Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset. The bot username is not a chat id, and this run did not poll `getUpdates`. Do not treat a Telegram summary as sent.
 
+---
+
+## 2026-11-16 (Monday) — nothing sendable
+
+**Batch size:** 0 companies (fewer than 20 sendable rows remain)  
+**Actually sent:** 0 companies · **0 messages** · failed 0  
+**Sent date:** `2026-11-16`  
+**Pack:** none drafted  
+**Channel:** SMTP was not called  
+
+### Notes
+
+- Rechecked all 416 rows in `leads/researched-leads.json` against `companies.csv` where `sent=yes`, and against `18th-sep.md`, `23rd-sep.md`, `26th-sep.md`, `29th-sep.md`, `9th-sep.md`, `16th-sep.md`, every later dated pack, and recipient rows in `*_sentmails.md` (name, folder, and email). The lead file is unchanged since 2026-09-29.
+- 307 rows are already sent or named as recipients in a pack. 26 unsent rows have no email. 83 unsent rows still have an address. None of those 83 has an Active CIN, a High inbox for this company, a healthcare or wellness product the research actually supports, and a domain that accepts mail. Addresses that appear only in earlier zero-send notes were rechecked and were not treated as already mailed.
+- MX recheck on 2026-11-16: `fitsocial.in`, `urbanhelps.in`, and `aetherrain.com` still have no MX (`ENODATA`). `digitalmeds.co`, `ethikaworklife.com`, and `tridhascholars.com` still do not resolve (`ENOTFOUND`). `biochiol.com`, `healtheeliving.com`, and `nmantra.in` still point MX at the website host. `neocortexls.co.in` timed out; `cortexls.com` accepts Outlook mail and the dossier is still CIRP / liquidation. `mymedpolicy.com` points MX at `mail.mymedpolicy.com`; the Hyderabad brand still has no matched CIN. `tecvertex.com` accepts mail at `mail.tecvertex.com`; the dossier says the CIN on that row is a different company. `tecvertex.com.com` and `victriz.com.com` resolve to inbound-mx and stay off as typos.
+- Accepting domains still fail the dossier gate: `wellnessfuel.in` (`mail.wellnessfuel.in`; do not substitute `info@wellnessfuel.in`, different Delhi/Noida entity), `arivhealthcare.com` (clinic inbox is not Ariv Biosciences), `earthful.me` (no verified Earthlies email or CIN), `occulthouse.in` (different entity), and `igylx.com` (personal inbox not unlocked).
+- Mail-accepting domains that stayed off: `makeyoufit.in`, `therapickmind.com`, `vedicneeds.com`, `bharatfit.in`, `nutriscan.app`, `mylktree.com`, `snugbug.co`, `nuform.in`, `neuformnutrition.com`, `venica.in`, `carin.life`, `thebeyondedge.com`, and GLS Pools (brand-only, blocked, NOT UNLOCKED, no CIN, or not a healthcare product). `bharatfit.in` accepts mail, and the addresses on that row belong to a different legal entity. `chewlynutritions.com` and `ainetwork.in` accept mail but the local-part is masked. `fitaf.in` accepts mail at `smtp.google.com`, and the dossier still says not to send because product ownership is not confirmed. `playcafediaries.in`, `sidventures.in`, and `ninnti.com` accept mail and are not a healthcare product. `amplifylife.com` accepts mail and is the sibling brand, not the Nxtgen inbox. `sciencehood.info` accepts mail and the entity is a publisher. `srisritattva.com` accepts mail and is a company-secretary inbox, not the Sriveda store. `ekincare.com` accepts mail and stayed off because the dossier is a Series B company.
+- Empty email fields stayed off. No local-part was invented for Befine Healthcare or findhope.
+- Closest Active rows left off so mail would not bounce: Civigo / UrbanHelps and Fitsocial (no MX), Aether Rain (no MX), Healtheeliving and GRST / Biochiol (MX equals the website host).
+- Further dossier holds confirmed this pass: Zestiny Labs (DealScan gift cards), Neocortex Lifesciences (CIRP / liquidation), Netri Healthcare (iLabs group inbox), Hemp Tribe (shared Suraksha Pharma inbox), Health4All (dormant under section 455), CallHealth (company-secretary inbox, scaled operator), Blueowl (liquidation), Preventa Curo / Finn Research / Cure Mile / Op24 (strike off), Curova (textiles), Adept Web (CA filing inbox), Vitruvian 3D and Osmosys (not healthcare), Yogasva (sibling software inbox), Sree Aspada (filing-pattern inbox), Lavleen Gupta (person-only), Prayukti Innovistaa (textile NIC), Digiring HW (registry Gmail, dossier says do not send), Flyingroot Solutions (product not established), Egarevel Tech (no verified health product), GB Holdings (no verified health product), Dentyle (legal entity not resolved to the brand), Anara Life Thread and Anjani Innovations (masked local-parts), Blossom14 (filing-pattern inbox), and INU Energy (secretarial inbox).
+- Still excluded: blocked, masked, or NOT UNLOCKED rows; brand-only or no-CIN rows; strike-off, CIRP, liquidation, or dormant; CA, company-secretary, or filing inboxes; sister inboxes; and rows whose research is not a healthcare or wellness product.
+- `companies.csv` was not changed. Do not mark anyone `sent=yes` for this date.
+- Do not auto-send `23rd-sep.md`. It is still a held draft.
+- SMTP was not called. No app password was written into the repo.
+- Telegram notify did not run: `TELEGRAM_CHAT_ID` is unset. The bot username is not a chat id, and this run did not poll `getUpdates`. Do not treat a Telegram summary as sent.
+
 
